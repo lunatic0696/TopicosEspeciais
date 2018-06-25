@@ -37,12 +37,12 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     name = 'post-detail'
     permission_classes = (customPermissions.PostPermission,)
 
-class CommentList(generics.ListAPIView):
+class CommentList(generics.ListCreateAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
     name = 'comment-list'
 
-class CommentDetail(generics.ListAPIView):
+class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
     name = 'comment-detail'

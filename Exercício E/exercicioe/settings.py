@@ -46,8 +46,8 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.UserRateThrottle',),
 
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '20/hour',
-        'user': '50/hour',
+        'anon': '2/hour',
+        'user': '5/hour',
         'api-token-auth-custom': '1/hour'
     },
 
